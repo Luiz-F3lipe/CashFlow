@@ -1,4 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/home/plasoftcloud/.var/app/com.jetbrains.Rider/cache/JetBrains/Rider2025.1/resharper-host/temp/Rider/vAny/CoverageData/_CashFlow.-891261980/Snapshot/snapshot.utdcvr</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=97470547_002D2c77_002D4fdc_002Dad8b_002D77fec5b070bc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RegisterExpenseValidatorTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::6DF85FE2-94F6-4266-B88F-1E5630CF2408::net8.0::Validators.Tests.Expenses.Register.RegisterExpenseValidatorTests&lt;/TestId&gt;
