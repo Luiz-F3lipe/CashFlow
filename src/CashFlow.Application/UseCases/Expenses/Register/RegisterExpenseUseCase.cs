@@ -3,8 +3,8 @@ using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using CashFlow.Exception.ExceptionsBase;
 using CashFlow.Domain.Entities;
+using CashFlow.Domain.Repositories;
 using CashFlow.Domain.Repositories.Expenses;
-using CashFlow.Infrastructure.DataAccess.Repositories;
 using PaymentType = CashFlow.Domain.Enums.PaymentType;
 
 
@@ -17,7 +17,7 @@ public class RegisterExpenseUseCase : IRegisterExpenseUseCase
         _repository = repository;
         _unitOfWork = unitOfWork;
     }
-    public ResponseRegisteredExpenseJson Execute(RequestRegisterExpenseJson request)
+    public async Task<ResponseRegisteredExpenseJson> Execute(RequestRegisterExpenseJson request)
     {
         Validate(request);
 
@@ -30,9 +30,9 @@ public class RegisterExpenseUseCase : IRegisterExpenseUseCase
             PaymentType = (PaymentType)request.PaymentType,
         };
         
-        _repository.Add(entity);
+        await _repository.Add(entity);
         
-        _unitOfWork.Commit();
+        await _unitOfWork.Commit();
         
         return new ResponseRegisteredExpenseJson();
     }
